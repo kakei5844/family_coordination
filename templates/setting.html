@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account Setting
+{% endblock %}
+
+{% block main %}
+
+    <form action="/setting" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="old_password" name="old_password" placeholder="Old Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="new_password" name="new_password" placeholder="New Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirm" name="confirm" placeholder="Confirm New Password" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+
+{% endblock %}

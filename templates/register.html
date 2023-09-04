@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+      <div class="sub-form">
+        <h3>How do you want to be called?</h3>
+        <div class="mb-3">
+          <input autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Your Name" type="text" required>
+        </div>
+      </div>
+
+      <div class="sub-form">
+        <h3>Log In Info</h3>
+        <div class="mb-3">
+          <input autocomplete="username" class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+      </div>
+
+      <div class="sub-form">
+        <h3>Birthday</h3>
+        <div class="mb-3">
+          <input autocomplete="bday-day" class="form-control mx-auto w-auto" id="dd" name="dd" placeholder="dd" type="text" required>
+        </div>
+        <div class="mb-3">
+          <input autocomplete="bday-month" class="form-control mx-auto w-auto" id="mm" name="mm" placeholder="mm" type="text" required>
+        </div>
+        <div class="mb-3">
+          <input autocomplete="bday-year" class="form-control mx-auto w-auto" id="yyyy" name="yyyy" placeholder="yyyy" type="text" required>
+        </div>
+      </div>
+
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+{% endblock %}
+

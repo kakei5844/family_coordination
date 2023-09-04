@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shopping List
+{% endblock %}
+
+{% block main %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css" rel="stylesheet">
+    <input type="text" placeholder="Enter new item" id="item" required>
+    <button id="add">Add</button>
+
+    <table class="table table-hover">
+        <thead>
+            <th></th>
+            <th></th>
+            <th>Item</th>
+            <th>Suggested by</th>
+            <th>Purchased by</th>
+            <th>Amount</th>
+            <th>Cancel</th>
+        </thead>
+        <tbody id="shopping_list">
+        </tbody>
+    </table>
+    <script src="static/shoppinglist.js"></script>
+{% endblock %}
